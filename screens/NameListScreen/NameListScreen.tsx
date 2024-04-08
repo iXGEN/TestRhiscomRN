@@ -26,7 +26,7 @@ const NameListScreen = () => {
         {names.map((name, index) => (
           <TouchableHighlight key={index} onPress={() => handleNameClick(name)}>
             <View style={styles.nameContainer}>
-              <Text>{name}</Text>
+              <Text style={styles.nameText}>{name}</Text>
             </View>
           </TouchableHighlight>
         ))}
@@ -42,7 +42,7 @@ const NameListScreen = () => {
             <Text style={styles.modalText}>{selectedName}</Text>
             <Image source={{uri: selectedImageUrl}} style={styles.modalImage} />
             <TouchableHighlight onPress={closeModal}>
-              <Text style={styles.closeButton}>Cerrar</Text>
+              <Text style={styles.closeButton}>X</Text>
             </TouchableHighlight>
           </View>
         </View>

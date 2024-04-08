@@ -4,11 +4,17 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 50,
+    backgroundColor: '#1a5e83',
   },
   nameContainer: {
     padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomWidth: 1.5,
+    borderBottomColor: 'white',
+  },
+  nameText: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   modalContainer: {
     flex: 1,
@@ -19,7 +25,10 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalText: {
-    marginBottom: 20,
+    fontSize: 28,
+    marginBottom: 24,
+    color: '#1a5e83',
+    fontWeight: 'bold',
   },
   modalImage: {
     width: 150,
@@ -27,6 +36,9 @@ export const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   closeButton: {
+    color: 'red',
+    fontSize: 32,
+    fontWeight: 'bold',
     marginTop: 10,
   },
 });
