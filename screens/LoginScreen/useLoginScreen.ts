@@ -1,12 +1,11 @@
 import {useEffect} from 'react';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
-
+import {WEB_CLIENT_ID} from '@env';
 const useLoginScreen = (navigation: any) => {
   useEffect(() => {
     GoogleSignin.configure({
-      webClientId:
-        '649533092887-ncrpa99jjogab452s1niopjnm6jetu00.apps.googleusercontent.com',
+      webClientId: WEB_CLIENT_ID,
     });
   }, []);
 
