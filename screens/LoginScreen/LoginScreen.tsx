@@ -3,7 +3,7 @@ import {View, Button, Alert} from 'react-native';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}: any) => {
   useEffect(() => {
     GoogleSignin.configure({
       webClientId:
@@ -24,8 +24,10 @@ const LoginScreen = () => {
       // Create a Google credential with the token
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
-      // Sign-in the user with the credential
-      return auth().signInWithCredential(googleCredential);
+      await auth().signInWithCredential(googleCredential);
+
+      // Navigate to NameListScreen
+      navigation.navigate('NameListScreen');
     } catch (error) {
       console.log(error);
     }
