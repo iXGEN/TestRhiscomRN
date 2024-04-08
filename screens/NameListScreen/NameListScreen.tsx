@@ -7,8 +7,8 @@ import {
   TouchableHighlight,
   Image,
 } from 'react-native';
-import useNameModal from './useNameModal';
 import {styles} from './styles';
+import useNameModal from './useNameModal';
 import names from './names';
 
 const NameListScreen = () => {
